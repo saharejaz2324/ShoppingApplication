@@ -20,6 +20,7 @@ namespace WebApplication11
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+          //  Configuration.GetValue<string>("ConnectionStrings:ServerConnection");
         }
 
         public IConfiguration Configuration { get; }
@@ -27,9 +28,10 @@ namespace WebApplication11
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ServerConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
