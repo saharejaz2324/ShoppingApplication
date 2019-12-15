@@ -61,18 +61,19 @@ namespace ShoppingApplication.API.Controllers
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = creds
-            };
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return Ok(new
-            {
-                token = tokenHandler.WriteToken(token)
-            });
+            //var tokenDescriptor = new SecurityTokenDescriptor
+            //{
+            //    Subject = new ClaimsIdentity(claims),
+            //    Expires = DateTime.Now.AddDays(1),
+            //    SigningCredentials = creds
+            //};
+            //var tokenHandler = new JwtSecurityTokenHandler();
+            //var token = tokenHandler.CreateToken(tokenDescriptor);
+            //return Ok(new
+            //{
+            //    token = tokenHandler.WriteToken(token)
+            //});
+            return Ok();
         }
     }
 }
