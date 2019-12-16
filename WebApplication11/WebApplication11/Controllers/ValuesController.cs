@@ -8,7 +8,7 @@ using ShoppingApplication.API.Data;
 
 namespace WebApplication11.Controllers
 {
-    [Authorize]
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -27,7 +27,7 @@ namespace WebApplication11.Controllers
             var values = context.Values.ToList();
             return Ok(values);
         }
-        [AllowAnonymous]
+       // [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Getvalue(int id)
