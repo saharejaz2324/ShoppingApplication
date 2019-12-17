@@ -8,7 +8,7 @@ using ShoppingApplication.API.Data;
 
 namespace WebApplication11.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase

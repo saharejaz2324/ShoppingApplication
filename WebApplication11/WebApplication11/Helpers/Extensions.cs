@@ -17,5 +17,12 @@ namespace ShoppingApplication.API.Helpers
             response.Headers.Add("Access-Control-Expose-Headers", "Application-Error");
             response.Headers.Add("Access-Control-Allow-Origin", "*");
         }
+        public static int CalculateAge( this DateTime thedateTime)
+        {
+            var age = DateTime.Today.Year - thedateTime.Year;
+            if (thedateTime.AddYears(age) > DateTime.Today)
+                age--;
+            return age;
+        }
     }
 }
