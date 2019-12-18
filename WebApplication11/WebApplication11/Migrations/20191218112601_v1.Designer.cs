@@ -9,8 +9,8 @@ using ShoppingApplication.API.Data;
 namespace ShoppingApplication.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191217074255_forignKey")]
-    partial class forignKey
+    [Migration("20191218112601_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,8 @@ namespace ShoppingApplication.API.Migrations
                     b.Property<string>("Description");
 
                     b.Property<bool>("IsMain");
+
+                    b.Property<string>("PublicId");
 
                     b.Property<string>("Url");
 

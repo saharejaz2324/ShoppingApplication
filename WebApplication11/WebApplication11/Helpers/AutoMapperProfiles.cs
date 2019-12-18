@@ -26,6 +26,9 @@ namespace ShoppingApplication.API.Helpers
                 .ForMember(dest => dest.Age, opt => opt.MapFrom(src =>
                 src.DateofBirth.CalculateAge()));
             CreateMap<Photo, PhotoDetaild>();
+            CreateMap<UserForUpdate, User>();
+            CreateMap<Photo, PhotoForReturn>();
+            CreateMap<PhotoForCreation, Photo>();
         }
     }
 }
