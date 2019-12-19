@@ -9,10 +9,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApplication.API.Data.Interfaces;
 using ShoppingApplication.API.DTO;
+using ShoppingApplication.API.Helpers;
 using ShoppingApplication.API.Model;
 
 namespace ShoppingApplication.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))] // that modifies the way in which the action is executed.
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -27,11 +29,20 @@ namespace ShoppingApplication.API.Controllers
             this._mapper = mapper;
         }
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<IActionResult> GetUsers([FromQuery]UserParams userParams)
         {
-            var users = await _repo.GetUsers();
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            var userFromRepo = await _repo.GetUser(currentUserId);
+            userParams.UserId = currentUserId;
+
+            var users = await _repo.GetUsers(userParams);
 
             var usersReturn = _mapper.Map<IEnumerable<UserForLists>>(users);
+
+            Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, 
+                users.TotalPages);
+
             return Ok(usersReturn);
         }
         [HttpGet("{id}", Name ="GetUser")]
@@ -55,5 +66,34 @@ namespace ShoppingApplication.API.Controllers
                 return NoContent();
             throw new Exception($"Updating user {id} failed on save");
         }
+
+        [HttpPost("{id}/like/{recipientId}")]
+        public async Task<IActionResult> LikeUser(int id, int recipientId)
+        {
+            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var like = await _repo.GetLike(id, recipientId);
+
+            if (like != null)
+                return BadRequest("You already like this user");
+
+            if (await _repo.GetUser(recipientId) == null)
+            {
+                return NotFound();
+            }
+            like = new Like
+            {
+                LikerId = id,
+                LikeeId = recipientId
+            };
+
+            _repo.Add<Like>(like);
+
+            if (await _repo.SaveAll())
+                return Ok();
+            return BadRequest("Failed to like user");
+        }
+
     }
 }
