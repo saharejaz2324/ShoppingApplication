@@ -12888,11 +12888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sej\\Desktop\\Backend Project\\WebApplication11\\WebApplication11\\ShoppingApplication.API.csproj",
+      "projectUniqueName": "C:\\Users\\sej\\Desktop\\Udemy Course project\\Backend Project\\WebApplication11\\WebApplication11\\ShoppingApplication.API.csproj",
       "projectName": "ShoppingApplication.API",
-      "projectPath": "C:\\Users\\sej\\Desktop\\Backend Project\\WebApplication11\\WebApplication11\\ShoppingApplication.API.csproj",
+      "projectPath": "C:\\Users\\sej\\Desktop\\Udemy Course project\\Backend Project\\WebApplication11\\WebApplication11\\ShoppingApplication.API.csproj",
       "packagesPath": "C:\\Users\\sej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sej\\Desktop\\Backend Project\\WebApplication11\\WebApplication11\\obj\\",
+      "outputPath": "C:\\Users\\sej\\Desktop\\Udemy Course project\\Backend Project\\WebApplication11\\WebApplication11\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -12,3 +12,17 @@ C:\Users\sej\Desktop\Backend Project\WebApplication11\WebApplication11\bin\Debug
 C:\Users\sej\Desktop\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.RazorTargetAssemblyInfo.cache
 C:\Users\sej\Desktop\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.dll
 C:\Users\sej\Desktop\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.pdb
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\bin\Debug\netcoreapp2.2\ShoppingApplication.API.deps.json
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\bin\Debug\netcoreapp2.2\ShoppingApplication.API.runtimeconfig.json
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\bin\Debug\netcoreapp2.2\ShoppingApplication.API.runtimeconfig.dev.json
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\bin\Debug\netcoreapp2.2\ShoppingApplication.API.dll
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\bin\Debug\netcoreapp2.2\ShoppingApplication.API.pdb
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.csprojAssemblyReference.cache
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.csproj.CoreCompileInputs.cache
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.RazorAssemblyInfo.cache
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.RazorAssemblyInfo.cs
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.AssemblyInfoInputs.cache
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.AssemblyInfo.cs
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.RazorTargetAssemblyInfo.cache
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.dll
+C:\Users\sej\Desktop\Udemy Course project\Backend Project\WebApplication11\WebApplication11\obj\Debug\netcoreapp2.2\ShoppingApplication.API.pdb

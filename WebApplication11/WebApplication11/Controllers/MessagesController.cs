@@ -83,7 +83,9 @@ namespace ShoppingApplication.API.Controllers
         public async Task<IActionResult> CreateMessage(int userId, 
             MessageForCreation messageForCreation)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+
+            var sender = await _repo.GetUser(userId);
+            if (sender.Id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
 
             messageForCreation.SenderId = userId;
@@ -97,14 +99,18 @@ namespace ShoppingApplication.API.Controllers
 
             _repo.Add(message);
 
-            var messageToReturn = _mapper.Map<MessageToReturn>(message);
-
+         
 
             if (await _repo.SaveAll())
+            {
+                var messageToReturn = _mapper.Map<MessageToReturn>(message);
+
                 return CreatedAtRoute("GetMessage", new
                 {
                     id = message.Id
                 }, messageToReturn);
+            }
+            
             throw new Exception("Creating the message failed on save");
         }
         [HttpPost("{id}")]
